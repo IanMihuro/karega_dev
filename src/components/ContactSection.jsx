@@ -22,21 +22,21 @@ export default function ContactSection() {
           </div>
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Interested in high-scale systems architecture, technical leadership, or advisory? Reach out directly.
+            Interested in high-scale systems architecture, AI engineering &amp; safety, or technical leadership? Reach out directly.
           </p>
         </div>
 
         <div className="contact-hub-card">
           <div className="status-badge" style={{ marginBottom: '1.25rem' }}>
             <span className="status-dot"></span>
-            <span>Open to Senior Engineering &amp; Technical Leadership Roles</span>
+            <span>Open to Senior Engineering, AI Engineering &amp; Safety Leadership Roles</span>
           </div>
 
           <h3 style={{ fontSize: '1.85rem', fontWeight: 800, marginBottom: '0.85rem' }}>
-            Let's build scalable systems together.
+            Let's build scalable systems &amp; safe AI architectures together.
           </h3>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '640px', margin: '0 auto 2rem auto', fontSize: '1.05rem', lineHeight: 1.7 }}>
-            Whether you are looking to scale distributed cloud architectures, discuss LiveSite telemetry best practices, or explore leadership opportunities, my inbox is always open.
+            Whether you are looking to scale distributed cloud architectures, design reliable agentic AI systems with rigorous safety guardrails, or explore technical leadership opportunities, my inbox is always open.
           </p>
 
           {/* Quick Action Channels */}

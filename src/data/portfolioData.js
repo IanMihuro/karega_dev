@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Ian Karega Mihuro",
     role: "Senior Software Engineer · Technical Lead",
     tagline: "Engineering high-scale cloud services, enterprise applications, and AI-assisted developer systems.",
-    status: "Lead for High-Scale Enterprise Platforms",
+    status: "High-Scale Systems, AI Engineering & Safety Lead",
     location: "Nairobi, Kenya (Remote)",
     email: "i.mihuro@gmail.com",
     github: "https://github.com/IanMihuro",

@@ -61,6 +61,7 @@ export const portfolioData = {
       category: "cloud",
       categoryLabel: "Enterprise Systems",
       badge: "Flagship Lead",
+      proprietary: true,
       description: "Led end-to-end feature delivery for Microsoft 365 Name Pronunciation across Teams, Outlook, and Live People Cards. Oversaw flighting, telemetry, reliability, security reviews, and backend migrations handling 30 million daily fetch requests.",
       architecture: "Live People Card UI -> GraphQL / PAPI/IAPI Migration -> M365 Substrate -> Geneva / Kusto Telemetry",
       highlights: [
@@ -70,7 +71,6 @@ export const portfolioData = {
       ],
       technologies: ["TypeScript", "React", "GraphQL", "Azure", "M365 Substrate", "Kusto/KQL", "Geneva"],
       liveUrl: "https://support.microsoft.com",
-      githubUrl: "https://github.com",
     },
     {
       id: "ai-noisy-monitor",
@@ -79,6 +79,7 @@ export const portfolioData = {
       category: "ai",
       categoryLabel: "Emerging AI & Ops",
       badge: "AI Engineering",
+      proprietary: true,
       description: "Spearheaded AI-assisted noisy-monitor analysis, owner-reviewed tuning changes, and automated impact tracking. Contributed to early SeamsIQ Signal-to-RCA telemetry workflows to significantly reduce on-call fatigue.",
       architecture: "Geneva Live Telemetry -> KQL Aggregations -> AI Incident Analyzer -> Automated Alert Tuning",
       highlights: [
@@ -87,8 +88,7 @@ export const portfolioData = {
         "Documented operational learnings and automated remediation recipes for wider team reuse",
       ],
       technologies: ["Python", "Kusto/KQL", "Azure", "Agentic AI", "Geneva Telemetry"],
-      liveUrl: "https://github.com",
-      githubUrl: "https://github.com",
+      liveUrl: "https://support.microsoft.com",
     },
     {
       id: "nims-mobile-money",
@@ -97,6 +97,7 @@ export const portfolioData = {
       category: "backend",
       categoryLabel: "Fintech & Startups",
       badge: "Award Winner",
+      proprietary: true,
       description: "Served as CTO & Co-Founder, leading engineering of a web-based mobile money platform. Integrated real-time customer feedback into architecture improvements and pitched to global investors.",
       architecture: "Mobile Web Client -> REST API Microservices -> Relational DB -> Telecom Mobile Money Gateways",
       highlights: [
@@ -106,7 +107,6 @@ export const portfolioData = {
       ],
       technologies: ["JavaScript", "Python", "Node.js", "PostgreSQL", "Fintech APIs"],
       liveUrl: "https://startupistanbul.com",
-      githubUrl: "https://github.com",
     },
     {
       id: "agilis-quartet-apps",
@@ -115,6 +115,7 @@ export const portfolioData = {
       category: "frontend",
       categoryLabel: "Frontend Architecture",
       badge: "Enterprise Web",
+      proprietary: true,
       description: "Delivered complex frontends and healthcare applications through Andela for Firmatek, Agilis Chemicals, Phenix Real Time Solutions, and Quartet Health using React, TypeScript, Redux, and Storybook.",
       architecture: "React SPA + TypeScript -> Redux State Store -> Storybook UI System -> REST / WebSockets",
       highlights: [
@@ -124,7 +125,6 @@ export const portfolioData = {
       ],
       technologies: ["React", "TypeScript", "Redux", "Storybook", "Jest", "Selenium", "Node.js"],
       liveUrl: "https://andela.com",
-      githubUrl: "https://github.com",
     },
   ],
   experience: [

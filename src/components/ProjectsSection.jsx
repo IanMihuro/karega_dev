@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ExternalLink, ArrowRight } from 'lucide-react';
-import { GithubIcon } from './Icons';
+import { Layers, ExternalLink, ArrowRight, ShieldCheck } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 
@@ -89,29 +88,22 @@ export default function ProjectsSection() {
                   className="btn btn-outline btn-sm"
                   style={{ gap: '0.35rem' }}
                 >
-                  Deep Dive <ArrowRight size={14} />
+                  Architecture Deep Dive <ArrowRight size={14} />
                 </button>
 
-                <div className="project-links">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-link"
-                    title="View Source on GitHub"
-                  >
-                    <GithubIcon size={19} />
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-link"
-                    title="Live Production Demo / Documentation"
-                  >
-                    <ExternalLink size={19} />
-                  </a>
-                </div>
+                {project.liveUrl && (
+                  <div className="project-links">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="icon-link"
+                      title="Live Production Demo / Documentation"
+                    >
+                      <ExternalLink size={19} />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}

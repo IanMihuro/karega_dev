@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, CheckCircle2, Cpu } from 'lucide-react';
-import { GithubIcon } from './Icons';
+import { X, ExternalLink, CheckCircle2, Cpu, Lock } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -62,23 +61,34 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-primary"
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
+              Live Production Reference <ExternalLink size={16} />
+            </a>
+          )}
+          <span
+            className="mono"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.45rem',
+              fontSize: '0.82rem',
+              color: 'var(--text-muted)',
+              padding: '0.65rem 0.95rem',
+              background: 'rgba(255, 255, 255, 0.03)',
+              borderRadius: '0.5rem',
+              border: '1px solid var(--border-color)',
+            }}
           >
-            Live Production Demo <ExternalLink size={16} />
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-outline"
-          >
-            <GithubIcon size={16} /> Source Code
-          </a>
+            <Lock size={14} style={{ color: 'var(--accent-cyan)' }} />
+            Proprietary Enterprise Architecture
+          </span>
         </div>
       </div>
     </div>

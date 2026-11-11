@@ -19,11 +19,11 @@ export default function HobbiesSection() {
         <div className="section-header">
           <div className="section-tag">
             <Heart size={14} />
-            <span>BEYOND THE CODE</span>
+            <span>OFF THE CLOCK</span>
           </div>
-          <h2 className="section-title">Life &amp; Personal Passions</h2>
+          <h2 className="section-title">What I Enjoy Outside of Work</h2>
           <p className="section-subtitle">
-            What keeps me grounded, disciplined, and energized outside of large-scale systems engineering.
+            A few things I love doing to recharge, stay active, and explore when I step away from the keyboard.
           </p>
         </div>
 

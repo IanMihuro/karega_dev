@@ -10,18 +10,17 @@ export default function Hero() {
     'developer.ts': `// ian_mihuro.ts
 export const engineer = {
   name: "Ian Karega Mihuro",
-  role: "Senior Software Engineer · Technical Lead",
+  role: "Senior Software Engineer · Tech Lead · AI Engineer",
   leadScope: "Microsoft 365 Name Pronunciation",
   scale: "30M fetch reqs/day (550M/month in Teams)",
+  aiHarness: [
+    "Schema-first AI skills (Zod input/output contracts)",
+    "Stage-aware skill routing & policy overlays",
+    "Counterfactual replay & fail-closed safety gates"
+  ],
   stack: [
     "TypeScript", "React", "C#", ".NET",
-    "Azure", "M365 Substrate", "Kusto/KQL"
-  ],
-  coreFocus: [
-    "High-scale distributed services",
-    "Production telemetry & LiveSite reliability",
-    "Agentic AI harness development",
-    "Technical mentorship & team enablement"
+    "Azure", "M365 Substrate", "Kusto/KQL", "Zod"
   ]
 };`,
     'metrics.json': `{

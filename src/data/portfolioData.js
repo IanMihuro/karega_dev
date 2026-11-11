@@ -1,14 +1,14 @@
 export const portfolioData = {
   personal: {
     name: "Ian Karega Mihuro",
-    role: "Senior Software Engineer · Technical Lead",
-    tagline: "Engineering high-scale cloud services, enterprise applications, and AI-assisted developer systems.",
+    role: "Senior Software Engineer · Technical Lead · AI Engineer",
+    tagline: "Engineering high-scale cloud services, enterprise applications, and governed AI agent harnesses.",
     status: "High-Scale Systems, AI Engineering & Safety Lead",
     location: "Nairobi, Kenya (Remote)",
     email: "i.mihuro@gmail.com",
     github: "https://github.com/IanMihuro",
     linkedin: "https://linkedin.com/in/ian-mihuro-873344104/",
-    bio: "Senior Software Engineer and Technical Lead with 10+ years of experience delivering mission-critical enterprise software, scalable production services, and modern full-stack web applications. Served as Engineering Lead for Microsoft 365 Name Pronunciation, coordinating cross-functional feature delivery for a service handling 30 million daily fetch requests on Microsoft Teams.",
+    bio: "Senior Software Engineer and Technical Lead with 10+ years of experience delivering mission-critical enterprise software, scalable production services, and modern full-stack web applications. Served as Engineering Lead for Microsoft 365 Name Pronunciation, coordinating cross-functional feature delivery for a service handling 30 million daily fetch requests on Microsoft Teams. I also design and build governed AI agent harnesses—turning LLMs into reliable production pipeline components using strict Zod input/output schemas, stage-aware skill routing, counterfactual telemetry replay, and fail-closed safety gates.",
   },
   stats: [
     { label: "Years Experience", value: "10+" },

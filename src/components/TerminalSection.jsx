@@ -105,7 +105,7 @@ export default function TerminalSection() {
             </div>
             <div className="terminal-title">
               <TerminalIcon size={14} />
-              <span>ian@m365-lead-station: ~</span>
+              <span>karega@m365-lead-station: ~</span>
             </div>
             <div style={{ width: '40px' }}></div>
           </div>
@@ -118,7 +118,7 @@ export default function TerminalSection() {
             ))}
 
             <form onSubmit={handleSubmit} className="terminal-input-row">
-              <span className="terminal-prompt">visitor@ian-dev:~$</span>
+              <span className="terminal-prompt">visitor@karega-dev:~$</span>
               <input
                 ref={inputRef}
                 type="text"

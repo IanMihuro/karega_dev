@@ -26,7 +26,7 @@ export default function Navbar({ theme, toggleTheme }) {
         <div className="navbar-inner">
           <a href="#about" className="nav-brand">
             <Terminal size={22} />
-            <span>ian<span className="prompt-cursor">_</span>dev</span>
+            <span>karega<span className="prompt-cursor">_</span>dev</span>
           </a>
 
           {/* Desktop Links */}

@@ -11,6 +11,7 @@ export default function Navbar({ theme, toggleTheme }) {
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
+    { label: 'Interests', href: '#hobbies' },
     { label: 'Terminal', href: '#terminal' },
     { label: 'Contact', href: '#contact' },
   ];

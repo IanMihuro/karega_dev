@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
+import HobbiesSection from './components/HobbiesSection';
 import TerminalSection from './components/TerminalSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ export default function App() {
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
+        <HobbiesSection />
         <TerminalSection />
         <ContactSection />
       </main>

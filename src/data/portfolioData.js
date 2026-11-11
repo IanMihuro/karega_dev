@@ -6,7 +6,6 @@ export const portfolioData = {
     status: "Lead for High-Scale Enterprise Platforms",
     location: "Nairobi, Kenya (Remote)",
     email: "i.mihuro@gmail.com",
-    phone: "+254741767896",
     github: "https://github.com",
     linkedin: "https://linkedin.com/in/ian-mihuro-873344104/",
     bio: "Senior Software Engineer and Technical Lead with 10+ years of experience delivering mission-critical enterprise software, scalable production services, and modern full-stack web applications. Served as Engineering Lead for Microsoft 365 Name Pronunciation, coordinating cross-functional feature delivery for a service handling 30 million daily fetch requests on Microsoft Teams.",
@@ -317,6 +316,36 @@ export const portfolioData = {
       liveUrl: "https://andela.com",
     },
   ],
+  hobbies: [
+    {
+      title: "Botanical Cultivation & Indoor Botany",
+      category: "Nature & Systematic Care",
+      icon: "Sprout",
+      description: "Curating thriving indoor flora, bonsai, and propagation systems. Balancing micro-climates, soil chemistry, and systematic care routines—a therapeutic exercise in patience and organic growth.",
+      tags: ["Indoor Flora", "Micro-Climates", "Propagation", "Patience"],
+    },
+    {
+      title: "Functional Strength & Wilderness Trekking",
+      category: "Wellness & Physical Discipline",
+      icon: "Dumbbell",
+      description: "Dedicated compound barbell weightlifting for physical resilience and mental discipline, paired with immersive long-distance nature hikes to disconnect from screens and recharge.",
+      tags: ["Strength Training", "Wilderness Trails", "Discipline", "Mindfulness"],
+    },
+    {
+      title: "Strategic & Immersive Gaming",
+      category: "Interactive Systems",
+      icon: "Gamepad2",
+      description: "Engaging in expansive open-world RPGs, tactical simulations, and real-time strategy. Deeply fascinated by game engine architecture, low-latency networking, and systems mechanics.",
+      tags: ["Tactical Strategy", "Immersive RPGs", "Systems Design", "Co-op Play"],
+    },
+    {
+      title: "Overland Expeditions & Road Trips",
+      category: "Exploration & Geography",
+      icon: "Compass",
+      description: "Long-distance road trips, open-road navigation, and venturing off the beaten path to explore remote geography and changing landscapes across diverse regional terrains.",
+      tags: ["Overland Drives", "Remote Routes", "Topography", "Spontaneous Travel"],
+    },
+  ],
   experience: [
     {
       period: "Aug 2021 – Present",
@@ -399,12 +428,13 @@ export const portfolioData = {
     },
   ],
   terminalCommands: {
-    help: "Available commands:\n  • skills      : View technical proficiencies & cloud stack\n  • scale       : See production traffic & scale metrics (30M reqs/day)\n  • projects    : View engineering projects & M365 systems\n  • exp         : View career timeline (Microsoft, Andela, NIMS)\n  • contact     : Get Ian's email, LinkedIn, and phone\n  • stack       : Tech stack of this portfolio SPA\n  • clear       : Clear terminal screen",
+    help: "Available commands:\n  • skills      : View technical proficiencies & cloud stack\n  • scale       : See production traffic & scale metrics (30M reqs/day)\n  • projects    : View engineering projects & M365 systems\n  • exp         : View career timeline (Microsoft, Andela, NIMS)\n  • hobbies     : View personal passions beyond engineering\n  • contact     : Get Ian's verified email and LinkedIn\n  • stack       : Tech stack of this portfolio SPA\n  • clear       : Clear terminal screen",
     skills: "TECHNICAL SKILLS:\n  Languages: JavaScript, TypeScript, C#, .NET, Node.js, Python, Java\n  Frontend:  React, Redux, Vite, Zod, Vitest, Jest, Storybook, Styled Components\n  Cloud/Ops: Azure, Azure Data Warehouse, Kubernetes, M365 Substrate, Kusto/KQL, Geneva\n  AI Eng:    Agentic skills, agent harness development, AI-assisted incident tuning",
     scale: "MICROSOFT 365 PRODUCTION SCALE:\n  • Daily fetch requests:   30,000,000+ per day (Teams General Ring)\n  • Monthly requests:       550,000,000+ per month\n  • Client surfaces:        Microsoft Teams, Outlook, Live People Cards\n  • Telemetry & Monitoring: Geneva Telemetry, Kusto / KQL, Automated AI Tuning",
     projects: "FEATURED WORK:\n  1. M365 Name Pronunciation Platform (Eng Lead, 30M reqs/day, PAPI/IAPI, GraphQL)\n  2. Live Persona Card (LPC) Platform (Shared M365 Runtime across Teams & Outlook)\n  3. Noise Triage Bench: AI Telemetry & RCA Tuning (KQL, Signal-to-RCA, Noise Reduction)\n  4. NIMS Mobile Money Platform (CTO & Co-Founder, 1st Place Startup Istanbul 2015)\n  5. Enterprise Web Platforms via Andela (Firmatek, Agilis Chemicals, Quartet Health)",
-    exp: "CAREER HISTORY:\n  [2021 - Pres] Senior Software Engineer (Eng Lead) @ Microsoft\n  [2019 - 2021] Software Engineer @ Andela\n  [2018 - 2019] Full Stack Developer @ mSurvey (Ajua)\n  [2017 - 2018] Software Consultant @ eShare\n  [2015 - 2017] CTO & Co-Founder @ NIMS (1st Place Startup Istanbul 2015)\n  [2014 - 2017] Senior Software Engineer @ Intellisoftplus",
-    contact: "CONNECT WITH IAN:\n  Email:    i.mihuro@gmail.com\n  Phone:    +254741767896\n  LinkedIn: linkedin.com/in/ian-mihuro-873344104/\n  Location: Nairobi, Kenya (Remote)",
+    exp: "CAREER HISTORY:\n  [2021 - Pres] Senior Software Engineer (Eng Lead & IC) @ Microsoft\n  [2019 - 2021] Software Engineer @ Andela\n  [2018 - 2019] Full Stack Developer @ mSurvey (Ajua)\n  [2017 - 2018] Software Consultant @ eShare\n  [2015 - 2017] CTO & Co-Founder @ NIMS (1st Place Startup Istanbul 2015)\n  [2014 - 2017] Senior Software Engineer @ Intellisoftplus",
+    hobbies: "PERSONAL PASSIONS & INTERESTS:\n  🌿 Botanical Care: Indoor flora propagation, micro-climates, systematic plant cultivation\n  🏋️ Fitness: Functional barbell strength training & long-distance wilderness hikes\n  🎮 Gaming: Immersive open-world RPGs, tactical strategy, game systems mechanics\n  🧭 Road Trips: Long-haul cross-country expeditions, off-the-beaten-path navigation",
+    contact: "CONNECT WITH IAN:\n  Email:    i.mihuro@gmail.com\n  LinkedIn: linkedin.com/in/ian-mihuro-873344104/\n  Location: Nairobi, Kenya (Remote)",
     stack: "PORTFOLIO ARCHITECTURE:\n  • Framework: React 18 SPA (Vite 6)\n  • Styling: Modern CSS Custom Properties & Glassmorphism\n  • Icons: Lucide React & Custom SVG\n  • Deployment: GitHub Pages compatible (Static HTML/JS/CSS bundle)",
   },
 };

@@ -69,7 +69,7 @@ export default function TerminalSection() {
 
         {/* Quick Suggestion Pills */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-          {['help', 'skills', 'scale', 'projects', 'exp', 'contact', 'stack', 'clear'].map((cmd) => (
+          {['help', 'skills', 'scale', 'projects', 'exp', 'hobbies', 'contact', 'stack', 'clear'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => executeQuickCommand(cmd)}

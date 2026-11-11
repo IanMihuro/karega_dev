@@ -70,7 +70,7 @@ export const portfolioData = {
         "Implemented GraphQL schema and deletion-flow compatibility for legacy recordings without IDs",
       ],
       technologies: ["TypeScript", "React", "GraphQL", "Azure", "M365 Substrate", "Kusto/KQL", "Geneva"],
-      liveUrl: "https://support.microsoft.com",
+      liveUrl: "https://www.youtube.com/watch?v=FoEAQZPT3os",
     },
     {
       id: "ai-noisy-monitor",

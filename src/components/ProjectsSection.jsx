@@ -98,7 +98,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noreferrer"
                       className="icon-link"
-                      title="Live Production Demo / Documentation"
+                      title={project.liveUrl.includes('youtube') || project.liveUrl.includes('youtu.be') ? 'Watch Feature Demo on YouTube' : 'Live Production Reference'}
                     >
                       <ExternalLink size={19} />
                     </a>

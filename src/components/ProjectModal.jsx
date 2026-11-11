@@ -69,7 +69,9 @@ export default function ProjectModal({ project, onClose }) {
               rel="noreferrer"
               className="btn btn-primary"
             >
-              Live Production Reference <ExternalLink size={16} />
+              {project.liveUrl.includes('youtube') || project.liveUrl.includes('youtu.be') 
+                ? 'Watch Feature Demo' 
+                : 'Live Production Reference'} <ExternalLink size={16} />
             </a>
           )}
           <span

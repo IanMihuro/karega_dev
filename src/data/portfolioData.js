@@ -88,7 +88,7 @@ export const portfolioData = {
         "Documented operational learnings and automated remediation recipes for wider team reuse",
       ],
       technologies: ["Python", "Kusto/KQL", "Azure", "Agentic AI", "Geneva Telemetry"],
-      liveUrl: "https://support.microsoft.com",
+      architectureDocUrl: "#architecture-breakdown",
     },
     {
       id: "nims-mobile-money",

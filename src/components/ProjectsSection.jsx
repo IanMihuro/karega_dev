@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ExternalLink, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Layers, ExternalLink, ArrowRight, FileText } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 
@@ -91,8 +91,27 @@ export default function ProjectsSection() {
                   Architecture Deep Dive <ArrowRight size={14} />
                 </button>
 
-                {project.liveUrl && (
-                  <div className="project-links">
+                <div className="project-links">
+                  {project.architectureDocUrl && (
+                    <a
+                      href={project.architectureDocUrl}
+                      target={project.architectureDocUrl.startsWith('http') || project.architectureDocUrl.endsWith('.pdf') ? '_blank' : undefined}
+                      rel="noreferrer"
+                      className="icon-link"
+                      title="Architecture Breakdown (PDF)"
+                      onClick={
+                        project.architectureDocUrl.startsWith('#')
+                          ? (e) => {
+                              e.preventDefault();
+                              setActiveModalProject(project);
+                            }
+                          : undefined
+                      }
+                    >
+                      <FileText size={19} />
+                    </a>
+                  )}
+                  {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -102,8 +121,8 @@ export default function ProjectsSection() {
                     >
                       <ExternalLink size={19} />
                     </a>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           ))}

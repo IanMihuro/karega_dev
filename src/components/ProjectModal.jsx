@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, CheckCircle2, Cpu, Lock } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2, Cpu, Lock, FileText } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -72,6 +72,25 @@ export default function ProjectModal({ project, onClose }) {
               {project.liveUrl.includes('youtube') || project.liveUrl.includes('youtu.be') 
                 ? 'Watch Feature Demo' 
                 : 'Live Production Reference'} <ExternalLink size={16} />
+            </a>
+          )}
+          {project.architectureDocUrl && (
+            <a
+              href={project.architectureDocUrl}
+              target={project.architectureDocUrl.startsWith('http') || project.architectureDocUrl.endsWith('.pdf') ? '_blank' : undefined}
+              rel="noreferrer"
+              className="btn btn-primary"
+              style={{ background: 'linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)' }}
+              onClick={
+                project.architectureDocUrl.startsWith('#')
+                  ? (e) => {
+                      e.preventDefault();
+                      alert('Architecture breakdown PDF will be attached here.');
+                    }
+                  : undefined
+              }
+            >
+              <FileText size={16} /> Architecture Breakdown (PDF)
             </a>
           )}
           <span

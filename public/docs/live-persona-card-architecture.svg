@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950">
+  <defs>
+    <style>
+      .bg { fill: #0a0f1d; }
+      .header-title { font: 800 32px 'Inter', sans-serif; fill: #f8fafc; }
+      .header-sub { font: 500 15px 'Inter', sans-serif; fill: #94a3b8; }
+      .lane-title { font: 700 16px 'Inter', sans-serif; fill: #38bdf8; letter-spacing: 0.05em; }
+      .card-title { font: 700 15px 'Inter', sans-serif; fill: #f1f5f9; }
+      .card-desc { font: 400 13px 'Inter', sans-serif; fill: #94a3b8; }
+      .card-chip { font: 600 11px 'JetBrains Mono', monospace; fill: #818cf8; }
+      .box { fill: #0f172a; stroke: rgba(148, 163, 184, 0.15); stroke-width: 1.5; rx: 12; ry: 12; }
+      .box-accent { fill: rgba(56, 189, 248, 0.07); stroke: rgba(56, 189, 248, 0.35); stroke-width: 1.5; rx: 10; ry: 10; }
+      .box-core { fill: rgba(99, 102, 241, 0.08); stroke: rgba(99, 102, 241, 0.4); stroke-width: 1.5; rx: 10; ry: 10; }
+      .box-success { fill: rgba(16, 185, 129, 0.08); stroke: rgba(16, 185, 129, 0.4); stroke-width: 1.5; rx: 10; ry: 10; }
+      .arrow-cyan { stroke: #38bdf8; stroke-width: 2.5; fill: none; marker-end: url(#arrow-c); }
+      .arrow-indigo { stroke: #818cf8; stroke-width: 2.5; fill: none; marker-end: url(#arrow-i); }
+    </style>
+    <marker id="arrow-c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-i" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#818cf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="950" class="bg"/>
+
+  <!-- Title -->
+  <text x="60" y="55" class="header-title">Live Persona Card (LPC) Platform &amp; Runtime Architecture</text>
+  <text x="60" y="85" class="header-sub">One Core Card Platform + Many Host Shells: Reusable composition, pluggable capability loaders, and progressive ring governance across M365</text>
+
+  <!-- Layer 1: Host Surface Layer -->
+  <rect x="50" y="125" width="1500" height="150" class="box"/>
+  <text x="75" y="155" class="lane-title">1) HOST SURFACE &amp; ADAPTER LAYER</text>
+
+  <rect x="75" y="170" width="340" height="85" class="box-accent"/>
+  <text x="95" y="198" class="card-title">Microsoft Teams</text>
+  <text x="95" y="218" class="card-desc">Chat avatars, meeting rosters, profile hover cards</text>
+  <text x="95" y="240" class="card-chip">Teams Shell Adapter</text>
+
+  <rect x="445" y="170" width="340" height="85" class="box-accent"/>
+  <text x="465" y="198" class="card-title">Microsoft Outlook</text>
+  <text x="465" y="218" class="card-desc">Mail headers, calendar attendees, contact hover contexts</text>
+  <text x="465" y="240" class="card-chip">Outlook Host Adapter</text>
+
+  <rect x="815" y="170" width="340" height="85" class="box-accent"/>
+  <text x="835" y="198" class="card-title">Copilot &amp; Modern M365</text>
+  <text x="835" y="218" class="card-desc">AI-generated people references, contextual sidebars</text>
+  <text x="835" y="240" class="card-chip">Vanilla LPC Adapter</text>
+
+  <rect x="1185" y="170" width="340" height="85" class="box-accent"/>
+  <text x="1205" y="198" class="card-title">Host Presentation Engine</text>
+  <text x="1205" y="218" class="card-desc">Card entry triggers, action spacing, anchor alignment</text>
+  <text x="1205" y="240" class="card-chip">Two-Part Rendering Contract</text>
+
+  <!-- Downward Arrow 1 to 2 -->
+  <path d="M 800 275 L 800 320" class="arrow-cyan"/>
+
+  <!-- Layer 2: Core LPC Platform Runtime -->
+  <rect x="50" y="320" width="1500" height="180" class="box"/>
+  <text x="75" y="350" class="lane-title">2) LPC CORE PLATFORM RUNTIME (Shared Engine)</text>
+
+  <rect x="75" y="365" width="340" height="110" class="box-core"/>
+  <text x="95" y="393" class="card-title">Card Composition Engine</text>
+  <text x="95" y="415" class="card-desc">Assembles card layout slots, header,</text>
+  <text x="95" y="433" class="card-desc">actions, and interactive sections</text>
+  <text x="95" y="458" class="card-chip">Shared Core Layout</text>
+
+  <rect x="445" y="365" width="340" height="110" class="box-core"/>
+  <text x="465" y="393" class="card-title">Capability Registry &amp; Loaders</text>
+  <text x="465" y="415" class="card-desc">Dynamically mounts pluggable features</text>
+  <text x="465" y="433" class="card-desc">(Name Pronunciation, Pronouns, Org Chart)</text>
+  <text x="465" y="458" class="card-chip">Isolated Capability Mounting</text>
+
+  <rect x="815" y="365" width="340" height="110" class="box-core"/>
+  <text x="835" y="393" class="card-title">Identity &amp; Context Resolver</text>
+  <text x="835" y="415" class="card-desc">Resolves person/tenant entity context,</text>
+  <text x="835" y="433" class="card-desc">presence status, and permission scopes</text>
+  <text x="835" y="458" class="card-chip">Tenant Context Pipeline</text>
+
+  <rect x="1185" y="365" width="340" height="110" class="box-core"/>
+  <text x="1205" y="393" class="card-title">Feature Control Hooks</text>
+  <text x="1205" y="415" class="card-desc">Evaluates flighting, ring gates,</text>
+  <text x="1205" y="433" class="card-desc">admin toggles, and sovereign cloud eligibility</text>
+  <text x="1205" y="458" class="card-chip">Flighting &amp; Policy Gates</text>
+
+  <!-- Downward Arrow 2 to 3 -->
+  <path d="M 800 500 L 800 545" class="arrow-indigo"/>
+
+  <!-- Layer 3: Capability & Service Layer -->
+  <rect x="50" y="545" width="1500" height="160" class="box"/>
+  <text x="75" y="575" class="lane-title">3) SERVICE CLIENT PATH &amp; CAPABILITY DATA LAYER</text>
+
+  <rect x="75" y="590" width="450" height="95" class="box-accent"/>
+  <text x="95" y="618" class="card-title">Service Client Abstraction (Loki Path)</text>
+  <text x="95" y="638" class="card-desc">Standardized client-side request path normalizing backend calls</text>
+  <text x="95" y="660" class="card-chip">Client Abstraction Layer</text>
+
+  <rect x="555" y="590" width="450" height="95" class="box-accent"/>
+  <text x="575" y="618" class="card-title">Endpoint Migration (PAPI → IAPI)</text>
+  <text x="575" y="638" class="card-desc">Seamless cutover through Substrate ImageB2 without client breakage</text>
+  <text x="575" y="660" class="card-chip">Contract Normalization</text>
+
+  <rect x="1035" y="590" width="490" height="95" class="box-accent"/>
+  <text x="1055" y="618" class="card-title">Substrate &amp; Mailbox SDS Storage</text>
+  <text x="1055" y="638" class="card-desc">Mailbox-backed item storage, audio blobs, and GraphQL deletion flows</text>
+  <text x="1055" y="660" class="card-chip">SDS / M365 Substrate</text>
+
+  <!-- Downward Arrow 3 to 4 -->
+  <path d="M 800 705 L 800 745" class="arrow-cyan"/>
+
+  <!-- Layer 4: Operations & Governance -->
+  <rect x="50" y="745" width="1500" height="160" class="box"/>
+  <text x="75" y="775" class="lane-title">4) SCALE, GOVERNANCE &amp; RELIABILITY (Operational Rigor)</text>
+
+  <rect x="75" y="790" width="450" height="95" class="box-success"/>
+  <text x="95" y="818" class="card-title">Progressive Ring Rollout (Rings 0 - 4)</text>
+  <text x="95" y="838" class="card-desc">Canary validation -> Dogfood -> General Ring staged deployment</text>
+  <text x="95" y="860" class="card-chip">Zero-Regression Flighting</text>
+
+  <rect x="555" y="790" width="450" height="95" class="box-success"/>
+  <text x="575" y="818" class="card-title">Sovereign Cloud Compliance</text>
+  <text x="575" y="838" class="card-desc">Dedicated isolation and governance for US GCC &amp; GCC-High clouds</text>
+  <text x="575" y="860" class="card-chip">Government Cloud Compliance</text>
+
+  <rect x="1035" y="790" width="490" height="95" class="box-success"/>
+  <text x="1055" y="818" class="card-title">Geneva Telemetry &amp; IcM Incident Triage</text>
+  <text x="1055" y="838" class="card-desc">High-speed Kusto/KQL telemetry, noise reduction, and LiveSite escalation</text>
+  <text x="1055" y="860" class="card-chip">30M+ Requests/Day • 99.99% Reliability</text>
+</svg>

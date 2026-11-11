@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .header-title { font: 800 32px 'Inter', sans-serif; fill: #f8fafc; }
+      .header-sub { font: 500 15px 'Inter', sans-serif; fill: #94a3b8; }
+      .stage-title { font: 700 16px 'Inter', sans-serif; fill: #38bdf8; letter-spacing: 0.05em; }
+      .card-title { font: 700 15px 'Inter', sans-serif; fill: #f1f5f9; }
+      .card-desc { font: 400 13px 'Inter', sans-serif; fill: #94a3b8; }
+      .card-chip { font: 600 11px 'JetBrains Mono', monospace; fill: #38bdf8; }
+      .box { fill: #1e293b; stroke: #334155; stroke-width: 1.5; rx: 10; ry: 10; }
+      .box-accent { fill: rgba(56, 189, 248, 0.08); stroke: #38bdf8; stroke-width: 1.5; rx: 10; ry: 10; }
+      .box-warn { fill: rgba(245, 158, 11, 0.08); stroke: #f59e0b; stroke-width: 1.5; rx: 10; ry: 10; }
+      .box-success { fill: rgba(16, 185, 129, 0.08); stroke: #10b981; stroke-width: 1.5; rx: 10; ry: 10; }
+      .arrow { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .arrow-accent { stroke: #38bdf8; stroke-width: 2.5; fill: none; marker-end: url(#arrow-cyan); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" class="bg"/>
+
+  <!-- Title -->
+  <text x="60" y="55" class="header-title">Noise Triage Bench — Closed-Loop Monitor Remediation</text>
+  <text x="60" y="85" class="header-sub">End-to-end architecture: evidence ingestion, counterfactual replay validation, agentic PR drafting, and post-merge impact measurement</text>
+
+  <!-- Stage 1: Ingestion -->
+  <rect x="50" y="130" width="280" height="660" class="box"/>
+  <text x="70" y="165" class="stage-title">1. EVIDENCE INGESTION</text>
+  
+  <rect x="70" y="190" width="240" height="110" class="box-accent"/>
+  <text x="85" y="218" class="card-title">IcM Incident Stream</text>
+  <text x="85" y="242" class="card-desc">Page frequency, severity,</text>
+  <text x="85" y="260" class="card-desc">closure semantics, noise flags</text>
+  <text x="85" y="285" class="card-chip">IcM / Incident API</text>
+
+  <rect x="70" y="320" width="240" height="110" class="box-accent"/>
+  <text x="85" y="348" class="card-title">Monitor Configs &amp; Ownership</text>
+  <text x="85" y="372" class="card-desc">Thresholds, windows, routes,</text>
+  <text x="85" y="390" class="card-desc">owning repos and team metadata</text>
+  <text x="85" y="415" class="card-chip">Geneva / Git Repos</text>
+
+  <rect x="70" y="450" width="240" height="110" class="box-accent"/>
+  <text x="85" y="478" class="card-title">Time-Series Telemetry</text>
+  <text x="85" y="502" class="card-desc">Underlying raw signal traces</text>
+  <text x="85" y="520" class="card-desc">needed for offline replay</text>
+  <text x="85" y="545" class="card-chip">Kusto (KQL) Stores</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 330 380 L 370 380" class="arrow-accent"/>
+
+  <!-- Stage 2: Classification & Gates -->
+  <rect x="370" y="130" width="280" height="660" class="box"/>
+  <text x="390" y="165" class="stage-title">2. RANKING &amp; SAFETY GATES</text>
+
+  <rect x="390" y="190" width="240" height="130" class="box-accent"/>
+  <text x="405" y="218" class="card-title">Deterministic Ranking</text>
+  <text x="405" y="242" class="card-desc">Recency-weighted scoring</text>
+  <text x="405" y="260" class="card-desc">(7 / 14 / 30-day slices) to</text>
+  <text x="405" y="278" class="card-desc">prioritize active noisy churn</text>
+  <text x="405" y="303" class="card-chip">Explainable Heuristics</text>
+
+  <rect x="390" y="340" width="240" height="180" class="box-warn"/>
+  <text x="405" y="368" class="card-title">Strict Safety Gates</text>
+  <text x="405" y="392" class="card-desc">Automated hard stops for:</text>
+  <text x="405" y="412" class="card-desc">• Real customer-impact classes</text>
+  <text x="405" y="430" class="card-desc">• Outage / security-critical monitors</text>
+  <text x="405" y="448" class="card-desc">• Insufficient historical evidence</text>
+  <text x="405" y="475" class="card-desc" style="fill: #f59e0b; font-weight: 600;">"No recommendation &gt; unsafe change"</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 650 380 L 690 380" class="arrow-accent"/>
+
+  <!-- Stage 3: Counterfactual Replay -->
+  <rect x="690" y="130" width="280" height="660" class="box"/>
+  <text x="710" y="165" class="stage-title">3. COUNTERFACTUAL REPLAY</text>
+
+  <rect x="710" y="190" width="240" height="140" class="box-accent"/>
+  <text x="725" y="218" class="card-title">Recommendation Engine</text>
+  <text x="725" y="242" class="card-desc">Generates candidate config actions:</text>
+  <text x="725" y="260" class="card-desc">• Threshold adjustment</text>
+  <text x="725" y="278" class="card-desc">• Consecutive failure count</text>
+  <text x="725" y="296" class="card-desc">• Evaluation / suppression windows</text>
+
+  <rect x="710" y="350" width="240" height="180" class="box-success"/>
+  <text x="725" y="378" class="card-title">Historical Replay Simulator</text>
+  <text x="725" y="402" class="card-desc">Replays candidate rules against</text>
+  <text x="725" y="420" class="card-desc">historical time-series:</text>
+  <text x="725" y="442" class="card-desc">• Noise suppressed: ~70-85%</text>
+  <text x="725" y="460" class="card-desc">• True outages missed: ZERO</text>
+  <text x="725" y="488" class="card-chip">Mathematical Verification</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 970 380 L 1010 380" class="arrow-accent"/>
+
+  <!-- Stage 4: Agentic PR Drafting -->
+  <rect x="1010" y="130" width="280" height="660" class="box"/>
+  <text x="1030" y="165" class="stage-title">4. AGENTIC PR AUTOMATION</text>
+
+  <rect x="1030" y="190" width="240" height="150" class="box-accent"/>
+  <text x="1045" y="218" class="card-title">AI Skills Monorepo</text>
+  <text x="1045" y="240" class="card-desc">• Summarizer Skill: failure modes</text>
+  <text x="1045" y="258" class="card-desc">• Config Composer: YAML diffs</text>
+  <text x="1045" y="276" class="card-desc">• PR Narrative: evidence tables</text>
+  <text x="1045" y="300" class="card-chip">Agent Harness / Pydantic</text>
+
+  <rect x="1030" y="360" width="240" height="150" class="box-accent"/>
+  <text x="1045" y="388" class="card-title">Owner-Reviewable PRs</text>
+  <text x="1045" y="412" class="card-desc">Generates clean pull requests:</text>
+  <text x="1045" y="430" class="card-desc">• Before/after config diff</text>
+  <text x="1045" y="448" class="card-desc">• Replay proof &amp; safety rationale</text>
+  <text x="1045" y="475" class="card-chip">Zero Auto-Merge / Human-in-Loop</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path d="M 1290 380 L 1330 380" class="arrow-accent"/>
+
+  <!-- Stage 5: Closed-Loop Measurement -->
+  <rect x="1330" y="130" width="240" height="660" class="box"/>
+  <text x="1350" y="165" class="stage-title">5. CLOSED LOOP</text>
+
+  <rect x="1350" y="190" width="200" height="140" class="box-success"/>
+  <text x="1365" y="218" class="card-title">Post-Merge Delta</text>
+  <text x="1365" y="242" class="card-desc">Monitors merged PRs</text>
+  <text x="1365" y="260" class="card-desc">across 7/14-day post-rollout</text>
+  <text x="1365" y="278" class="card-desc">windows vs baseline</text>
+  <text x="1365" y="303" class="card-chip">Signal-to-Noise Score</text>
+
+  <rect x="1350" y="350" width="200" height="140" class="box-accent"/>
+  <text x="1365" y="378" class="card-title">Outcome Verification</text>
+  <text x="1365" y="402" class="card-desc">Confirms alert fatigue</text>
+  <text x="1365" y="420" class="card-desc">reduction without new</text>
+  <text x="1365" y="438" class="card-desc">incident regressions</text>
+
+  <!-- Feedback Loop Arrow back from 5 to 1 -->
+  <path d="M 1450 510 L 1450 720 L 190 720 L 190 580" class="arrow-accent" stroke-dasharray="8 6"/>
+  <text x="730" y="745" class="card-chip" style="font-size: 13px;">Continuous Feedback &amp; Calibration Loop</text>
+</svg>

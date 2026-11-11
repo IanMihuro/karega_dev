@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 16px Arial, sans-serif; fill: #334155; }
+      .lane-title { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .box-title { font: 700 15px Arial, sans-serif; fill: #0f172a; }
+      .box-text { font: 400 13px Arial, sans-serif; fill: #1f2937; }
+      .small { font: 400 12px Arial, sans-serif; fill: #475569; }
+      .impact { font: 700 14px Arial, sans-serif; fill: #14532d; }
+      .lane { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+      .box { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.5; rx: 10; ry: 10; }
+      .accent { fill: #ecfeff; stroke: #06b6d4; stroke-width: 2; rx: 10; ry: 10; }
+      .ship { fill: #f5f3ff; stroke: #8b5cf6; stroke-width: 1.5; rx: 10; ry: 10; }
+      .warn { fill: #fff7ed; stroke: #f97316; stroke-width: 1.5; rx: 10; ry: 10; }
+      .green { fill: #f0fdf4; stroke: #22c55e; stroke-width: 1.5; rx: 10; ry: 10; }
+      .arrow { stroke: #334155; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .dash { stroke-dasharray: 7 6; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1200" fill="#ffffff"/>
+
+  <text x="40" y="55" class="title">Name Pronunciation Architecture (M365 Multi-Surface)</text>
+  <text x="40" y="84" class="subtitle">End-to-end design you helped ship: client experience, API/storage migration, telemetry, and staged rollout across Teams/Outlook/LPC surfaces</text>
+
+  <!-- Lanes -->
+  <rect x="30" y="120" width="1740" height="170" class="lane"/>
+  <rect x="30" y="305" width="1740" height="250" class="lane"/>
+  <rect x="30" y="570" width="1740" height="250" class="lane"/>
+  <rect x="30" y="835" width="1740" height="330" class="lane"/>
+
+  <text x="45" y="145" class="lane-title">1) Surface Layer (User-facing experiences)</text>
+  <text x="45" y="330" class="lane-title">2) Experience Platform Layer (LPC host integration + rollout controls)</text>
+  <text x="45" y="595" class="lane-title">3) Service/Data Layer (API path + storage)</text>
+  <text x="45" y="860" class="lane-title">4) Reliability, LiveSite, and Shipping Governance</text>
+
+  <!-- Surface boxes -->
+  <rect x="80" y="165" width="240" height="95" class="ship"/>
+  <text x="95" y="190" class="box-title">Teams (General Ring + inner)</text>
+  <text x="95" y="212" class="box-text">People cards + profile entry points</text>
+  <text x="95" y="232" class="small">High-volume pronunciation fetches</text>
+
+  <rect x="350" y="165" width="240" height="95" class="ship"/>
+  <text x="365" y="190" class="box-title">Outlook</text>
+  <text x="365" y="212" class="box-text">LPC card hosts in mail/calendar</text>
+  <text x="365" y="232" class="small">Same pronunciation UX contract</text>
+
+  <rect x="620" y="165" width="260" height="95" class="ship"/>
+  <text x="635" y="190" class="box-title">Vanilla LPC consumers</text>
+  <text x="635" y="212" class="box-text">Copilot/PCOM-adjacent surfaces</text>
+  <text x="635" y="232" class="small">Host-agnostic reuse of LPC capability</text>
+
+  <rect x="910" y="165" width="250" height="95" class="ship"/>
+  <text x="925" y="190" class="box-title">M365 surfaces expansion</text>
+  <text x="925" y="212" class="box-text">New hosts onboard via LPC contract</text>
+  <text x="925" y="232" class="small">No custom backend fork required</text>
+
+  <rect x="1190" y="165" width="250" height="95" class="ship"/>
+  <text x="1205" y="190" class="box-title">Sovereign clouds</text>
+  <text x="1205" y="212" class="box-text">GCC / GCC High enablement</text>
+  <text x="1205" y="232" class="small">Compliance + cloud-specific rollout</text>
+
+  <!-- Platform layer -->
+  <rect x="90" y="350" width="320" height="170" class="box"/>
+  <text x="105" y="376" class="box-title">LPC capability integration</text>
+  <text x="105" y="398" class="box-text">• Pronunciation icon/player rendering</text>
+  <text x="105" y="418" class="box-text">• Loader + host capability wiring</text>
+  <text x="105" y="438" class="box-text">• Contract adaptation per host shell</text>
+  <text x="105" y="458" class="box-text">• UX consistency fixes across surfaces</text>
+  <text x="105" y="478" class="small">Example challenge: header/button layout shifts</text>
+
+  <rect x="440" y="350" width="330" height="170" class="accent"/>
+  <text x="455" y="376" class="box-title">Rollout + control plane</text>
+  <text x="455" y="398" class="box-text">• Feature flags / flights / ring allocations</text>
+  <text x="455" y="418" class="box-text">• Admin toggles and policy controls</text>
+  <text x="455" y="438" class="box-text">• Environment-specific gating</text>
+  <text x="455" y="458" class="box-text">• Staged exposure and rollback levers</text>
+  <text x="455" y="478" class="small">Production ramp + special cloud promotion</text>
+
+  <rect x="800" y="350" width="330" height="170" class="box"/>
+  <text x="815" y="376" class="box-title">Request path abstraction</text>
+  <text x="815" y="398" class="box-text">• Loki/service client invocation</text>
+  <text x="815" y="418" class="box-text">• Client fallback and contract handling</text>
+  <text x="815" y="438" class="box-text">• Legacy + migrated API route support</text>
+  <text x="815" y="458" class="box-text">• Error handling surfaced to reliability loop</text>
+
+  <rect x="1160" y="350" width="530" height="170" class="box"/>
+  <text x="1175" y="376" class="box-title">Telemetry instrumentation</text>
+  <text x="1175" y="398" class="box-text">• Request/response success/failure metrics</text>
+  <text x="1175" y="418" class="box-text">• Ring/surface breakdowns for rollout health</text>
+  <text x="1175" y="438" class="box-text">• Reliability scorecards + trend dashboards</text>
+  <text x="1175" y="458" class="box-text">• Incident correlation for quick triage</text>
+  <text x="1175" y="478" class="small">Used to validate migration + broad rollout stability</text>
+
+  <!-- Service/data layer -->
+  <rect x="90" y="615" width="290" height="170" class="warn"/>
+  <text x="105" y="641" class="box-title">Legacy service path</text>
+  <text x="105" y="663" class="box-text">PAPI /pronunciation contract</text>
+  <text x="105" y="683" class="box-text">Older response and ID assumptions</text>
+  <text x="105" y="703" class="box-text">Retained during staged migration</text>
+
+  <rect x="420" y="615" width="390" height="170" class="green"/>
+  <text x="435" y="641" class="box-title">Migrated service path (target)</text>
+  <text x="435" y="663" class="box-text">IAPI via Substrate ImageB2 endpoint</text>
+  <text x="435" y="683" class="box-text">Response shape moved to flatter payload</text>
+  <text x="435" y="703" class="box-text">Audio blob + item ID semantics updated</text>
+  <text x="435" y="723" class="box-text">Legacy collection assumptions removed</text>
+
+  <rect x="850" y="615" width="300" height="170" class="box"/>
+  <text x="865" y="641" class="box-title">Data storage path</text>
+  <text x="865" y="663" class="box-text">SDS storage access for item/audio</text>
+  <text x="865" y="683" class="box-text">Mailbox-backed pronunciation recordings</text>
+  <text x="865" y="703" class="box-text">Organization audience model in practice</text>
+
+  <rect x="1190" y="615" width="500" height="170" class="box"/>
+  <text x="1205" y="641" class="box-title">Service migration concerns managed</text>
+  <text x="1205" y="663" class="box-text">• Backward compatibility while hosts transitioned</text>
+  <text x="1205" y="683" class="box-text">• 404/missing-pronunciation regressions triaged</text>
+  <text x="1205" y="703" class="box-text">• Tenant/client misconfiguration issues corrected</text>
+  <text x="1205" y="723" class="box-text">• Rollout pacing adjusted by reliability evidence</text>
+
+  <!-- Reliability/shipping lane -->
+  <rect x="90" y="885" width="300" height="230" class="box"/>
+  <text x="105" y="911" class="box-title">LiveSite operations</text>
+  <text x="105" y="933" class="box-text">• IcM ownership + triage</text>
+  <text x="105" y="953" class="box-text">• Mitigation + customer comms</text>
+  <text x="105" y="973" class="box-text">• Master incident tracking</text>
+  <text x="105" y="993" class="box-text">• Recovery verification by ring/surface</text>
+
+  <rect x="430" y="885" width="350" height="230" class="box"/>
+  <text x="445" y="911" class="box-title">Validation loop</text>
+  <text x="445" y="933" class="box-text">1. Deploy flight increment</text>
+  <text x="445" y="953" class="box-text">2. Observe telemetry and failure modes</text>
+  <text x="445" y="973" class="box-text">3. Tune config/client/service behavior</text>
+  <text x="445" y="993" class="box-text">4. Promote to broader rings/surfaces</text>
+  <text x="445" y="1013" class="box-text">5. Repeat for sovereign clouds</text>
+
+  <rect x="820" y="885" width="380" height="230" class="accent"/>
+  <text x="835" y="911" class="box-title">Shipping to M365 surfaces</text>
+  <text x="835" y="933" class="box-text">• Common LPC capability contract</text>
+  <text x="835" y="953" class="box-text">• Host-specific UI shell integration</text>
+  <text x="835" y="973" class="box-text">• Feature flag onboarding per host</text>
+  <text x="835" y="993" class="box-text">• Ringed rollout + health gate promotion</text>
+  <text x="835" y="1013" class="box-text">• Admin/policy + cloud-specific compliance checks</text>
+  <text x="835" y="1033" class="box-text">• Shared telemetry to compare surface readiness</text>
+
+  <rect x="1240" y="885" width="450" height="230" class="green"/>
+  <text x="1255" y="911" class="box-title">Measured production impact</text>
+  <text x="1255" y="933" class="impact">~30M fetch requests/day on Teams general ring</text>
+  <text x="1255" y="955" class="impact">~550M fetch requests/month on Teams general ring</text>
+  <text x="1255" y="977" class="box-text">Excludes inner rings + special clouds</text>
+  <text x="1255" y="1005" class="box-text">Scale achieved after rollout + stabilization + migration</text>
+
+  <!-- Arrows -->
+  <path d="M320 212 L350 212" class="arrow"/>
+  <path d="M590 212 L620 212" class="arrow"/>
+  <path d="M880 212 L910 212" class="arrow"/>
+  <path d="M1160 212 L1190 212" class="arrow"/>
+
+  <path d="M200 260 L200 350" class="arrow"/>
+  <path d="M500 260 L600 350" class="arrow"/>
+  <path d="M760 260 L920 350" class="arrow"/>
+  <path d="M1320 260 L1380 350" class="arrow"/>
+
+  <path d="M770 435 L800 435" class="arrow"/>
+  <path d="M1130 435 L1160 435" class="arrow"/>
+
+  <path d="M235 520 L235 615" class="arrow"/>
+  <path d="M610 520 L610 615" class="arrow"/>
+  <path d="M980 520 L980 615" class="arrow"/>
+  <path d="M1420 520 L1420 615" class="arrow"/>
+
+  <path d="M380 700 L420 700" class="arrow"/>
+  <path d="M810 700 L850 700" class="arrow"/>
+  <path d="M1150 700 L1190 700" class="arrow"/>
+
+  <path d="M240 785 L240 885" class="arrow"/>
+  <path d="M600 785 L600 885" class="arrow"/>
+  <path d="M1000 785 L1000 885" class="arrow"/>
+  <path d="M1450 785 L1450 885" class="arrow"/>
+
+  <path d="M780 995 L820 995" class="arrow"/>
+  <path d="M1200 995 L1240 995" class="arrow"/>
+
+  <path d="M620 1080 L620 1040 L465 1040 L465 930" class="arrow dash"/>
+  <text x="480" y="1065" class="small">continuous improvement loop</text>
+</svg>

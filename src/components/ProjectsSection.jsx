@@ -95,18 +95,11 @@ export default function ProjectsSection() {
                   {project.architectureDocUrl && (
                     <a
                       href={project.architectureDocUrl}
-                      target={project.architectureDocUrl.startsWith('http') || project.architectureDocUrl.endsWith('.pdf') ? '_blank' : undefined}
+                      download
+                      target="_blank"
                       rel="noreferrer"
                       className="icon-link"
-                      title="Architecture Breakdown (PDF)"
-                      onClick={
-                        project.architectureDocUrl.startsWith('#')
-                          ? (e) => {
-                              e.preventDefault();
-                              setActiveModalProject(project);
-                            }
-                          : undefined
-                      }
+                      title={project.architectureDocLabel || 'Architectural Specification'}
                     >
                       <FileText size={19} />
                     </a>

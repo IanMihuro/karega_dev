@@ -20,9 +20,9 @@ export default function ProjectsSection() {
             <Layers size={14} />
             <span>PORTFOLIO WORK</span>
           </div>
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title">Featured Projects & Systems</h2>
           <p className="section-subtitle">
-            A selection of production-grade distributed architectures, developer platforms, and AI tools.
+            Enterprise platforms handling hundreds of millions of monthly requests, AI-assisted telemetry, and award-winning fintech.
           </p>
         </div>
 
@@ -32,25 +32,31 @@ export default function ProjectsSection() {
             className={`filter-btn ${selectedFilter === 'all' ? 'active' : ''}`}
             onClick={() => setSelectedFilter('all')}
           >
-            All Projects
-          </button>
-          <button
-            className={`filter-btn ${selectedFilter === 'backend' ? 'active' : ''}`}
-            onClick={() => setSelectedFilter('backend')}
-          >
-            Systems & Backend
-          </button>
-          <button
-            className={`filter-btn ${selectedFilter === 'frontend' ? 'active' : ''}`}
-            onClick={() => setSelectedFilter('frontend')}
-          >
-            AI & Full Stack
+            All Systems
           </button>
           <button
             className={`filter-btn ${selectedFilter === 'cloud' ? 'active' : ''}`}
             onClick={() => setSelectedFilter('cloud')}
           >
-            DevOps & Tooling
+            Enterprise & M365
+          </button>
+          <button
+            className={`filter-btn ${selectedFilter === 'ai' ? 'active' : ''}`}
+            onClick={() => setSelectedFilter('ai')}
+          >
+            Emerging AI & Ops
+          </button>
+          <button
+            className={`filter-btn ${selectedFilter === 'frontend' ? 'active' : ''}`}
+            onClick={() => setSelectedFilter('frontend')}
+          >
+            Frontend & Apps
+          </button>
+          <button
+            className={`filter-btn ${selectedFilter === 'backend' ? 'active' : ''}`}
+            onClick={() => setSelectedFilter('backend')}
+          >
+            Fintech & Startups
           </button>
         </div>
 
@@ -101,7 +107,7 @@ export default function ProjectsSection() {
                     target="_blank"
                     rel="noreferrer"
                     className="icon-link"
-                    title="Live Production Demo"
+                    title="Live Production Demo / Documentation"
                   >
                     <ExternalLink size={19} />
                   </a>

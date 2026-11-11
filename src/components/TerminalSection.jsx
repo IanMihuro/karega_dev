@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Terminal as TerminalIcon, CornerDownLeft } from 'lucide-react';
+import { Terminal as TerminalIcon } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function TerminalSection() {
   const [inputVal, setInputVal] = useState('');
   const [history, setHistory] = useState([
-    { type: 'output', text: 'Welcome to Alex Rivera\'s Interactive Terminal [Version 2.4.0]\nType "help" to see available commands or click quick suggestions below.' }
+    { type: 'output', text: 'Welcome to Ian Karega Mihuro\'s Interactive Console [v2.4.0]\nType "help" or click the command badges below to inspect technical scale, architecture, and experience.' }
   ]);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
@@ -27,7 +27,7 @@ export default function TerminalSection() {
     if (portfolioData.terminalCommands[trimmed]) {
       outputText = portfolioData.terminalCommands[trimmed];
     } else if (trimmed === 'whoami') {
-      outputText = 'visitor: A curious engineer or recruiter exploring elite engineering portfolios.';
+      outputText = 'visitor: Engineering partner, recruiter, or collaborator exploring high-scale systems leadership.';
     } else if (trimmed === 'date') {
       outputText = new Date().toUTCString();
     } else if (trimmed.startsWith('sudo')) {
@@ -59,17 +59,17 @@ export default function TerminalSection() {
         <div className="section-header">
           <div className="section-tag">
             <TerminalIcon size={14} />
-            <span>DEV PLAYGROUND</span>
+            <span>INTERACTIVE CONSOLE</span>
           </div>
-          <h2 className="section-title">Interactive CLI Console</h2>
+          <h2 className="section-title">Terminal & Systems Query</h2>
           <p className="section-subtitle">
-            Query skills, project specs, and background directly through the terminal emulator.
+            Query production scale metrics, telemetry architectures, and leadership background directly.
           </p>
         </div>
 
         {/* Quick Suggestion Pills */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-          {['help', 'skills', 'projects', 'exp', 'contact', 'stack', 'clear'].map((cmd) => (
+          {['help', 'skills', 'scale', 'projects', 'exp', 'contact', 'stack', 'clear'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => executeQuickCommand(cmd)}
@@ -98,7 +98,7 @@ export default function TerminalSection() {
             </div>
             <div className="terminal-title">
               <TerminalIcon size={14} />
-              <span>alex@fedora-workstation: ~</span>
+              <span>ian@m365-lead-station: ~</span>
             </div>
             <div style={{ width: '40px' }}></div>
           </div>
@@ -111,14 +111,14 @@ export default function TerminalSection() {
             ))}
 
             <form onSubmit={handleSubmit} className="terminal-input-row">
-              <span className="terminal-prompt">visitor@alex-dev:~$</span>
+              <span className="terminal-prompt">visitor@ian-dev:~$</span>
               <input
                 ref={inputRef}
                 type="text"
                 className="terminal-input"
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
-                placeholder="type a command (e.g. skills)..."
+                placeholder="type a command (e.g. scale)..."
                 autoComplete="off"
                 spellCheck="false"
               />

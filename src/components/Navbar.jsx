@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Terminal, Sun, Moon, Menu, X } from 'lucide-react';
-import { GithubIcon } from './Icons';
+import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -25,7 +25,7 @@ export default function Navbar({ theme, toggleTheme }) {
         <div className="navbar-inner">
           <a href="#about" className="nav-brand">
             <Terminal size={22} />
-            <span>alex<span className="prompt-cursor">_</span>dev</span>
+            <span>ian<span className="prompt-cursor">_</span>dev</span>
           </a>
 
           {/* Desktop Links */}
@@ -38,6 +38,16 @@ export default function Navbar({ theme, toggleTheme }) {
           </ul>
 
           <div className="nav-actions">
+            <a
+              href={portfolioData.personal.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="theme-toggle-btn"
+              title="LinkedIn Profile"
+            >
+              <LinkedinIcon size={18} />
+            </a>
+
             <a
               href={portfolioData.personal.github}
               target="_blank"

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Terminal, Copy, Check, FileCode, Layers, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Terminal, Copy, Check } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Hero() {
@@ -7,27 +7,30 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState('developer.ts');
 
   const codeSnippets = {
-    'developer.ts': `// alex_rivera.ts
+    'developer.ts': `// ian_mihuro.ts
 export const engineer = {
-  name: "Alex Rivera",
-  role: "Senior Full Stack & Cloud Architect",
-  principles: [
-    "Resilient distributed systems",
-    "Sub-100ms API latencies",
-    "Clean, typed component design"
+  name: "Ian Karega Mihuro",
+  role: "Senior Software Engineer · Technical Lead",
+  leadScope: "Microsoft 365 Name Pronunciation",
+  scale: "30M fetch reqs/day (550M/month in Teams)",
+  stack: [
+    "TypeScript", "React", "C#", ".NET",
+    "Azure", "M365 Substrate", "Kusto/KQL"
   ],
-  stack: ["React", "TypeScript", "Go", "Docker", "AWS"],
-  status: "Available for new ventures",
-  build: () => {
-    return "Engineering software that scales under load.";
-  }
+  coreFocus: [
+    "High-scale distributed services",
+    "Production telemetry & LiveSite reliability",
+    "Agentic AI harness development",
+    "Technical mentorship & team enablement"
+  ]
 };`,
     'metrics.json': `{
-  "productionUptime": "99.98%",
-  "queriesPerSecPeak": "250,000",
-  "averageP99Latency": "42ms",
-  "testCoverage": "94.2%",
-  "openSourceContributions": 184
+  "dailyFetchRequests": "30,000,000+",
+  "monthlyFetchRequests": "550,000,000+",
+  "startupIstanbul": "1st Place Winner (2015)",
+  "clientSurfaces": ["Microsoft Teams", "Outlook", "People Cards"],
+  "yearsExperience": "10+",
+  "education": "BSc IT, Dedan Kimathi University"
 }`
   };
 
@@ -49,7 +52,7 @@ export const engineer = {
 
             <h1 className="hero-title">
               Hi, I'm <span className="gradient-text">{portfolioData.personal.name}</span>.<br />
-              Full Stack & Systems Architect.
+              Technical Lead & Senior Software Engineer.
             </h1>
 
             <p className="hero-desc">

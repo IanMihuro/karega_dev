@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ExternalLink, ArrowRight, FileText } from 'lucide-react';
+import { Layers, ExternalLink, ArrowRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 
@@ -63,8 +63,10 @@ export default function ProjectsSection() {
         <div className="projects-grid">
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card">
-              <span className="project-badge">{project.badge}</span>
-              <span className="project-category">{project.categoryLabel}</span>
+              <div className="project-card-header">
+                <span className="project-category">{project.categoryLabel}</span>
+                <span className="project-badge">{project.badge}</span>
+              </div>
               <h3 className="project-title">{project.title}</h3>
               <p className="project-desc">{project.description}</p>
 
@@ -91,20 +93,8 @@ export default function ProjectsSection() {
                   Architecture Deep Dive <ArrowRight size={14} />
                 </button>
 
-                <div className="project-links">
-                  {project.architectureDocUrl && (
-                    <a
-                      href={project.architectureDocUrl}
-                      download
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-link"
-                      title={project.architectureDocLabel || 'Architectural Specification'}
-                    >
-                      <FileText size={19} />
-                    </a>
-                  )}
-                  {project.liveUrl && (
+                {project.liveUrl && (
+                  <div className="project-links">
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -114,8 +104,8 @@ export default function ProjectsSection() {
                     >
                       <ExternalLink size={19} />
                     </a>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

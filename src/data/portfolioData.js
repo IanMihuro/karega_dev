@@ -65,8 +65,6 @@ export const portfolioData = {
       description: "Led end-to-end feature delivery for Microsoft 365 Name Pronunciation across Teams, Outlook, and Live People Cards. Oversaw flighting, telemetry, reliability, security reviews, and backend migrations handling 30 million daily fetch requests.",
       architecture: "Teams / Outlook / LPC Shells -> Modular LPC Runtime -> Loki Client -> Substrate / IAPI (ImageB2) -> Mailbox SDS Audio Storage -> Geneva / Kusto Observability",
       architectureDiagram: "./docs/name-pronunciation-architecture.svg",
-      architectureDocUrl: "./docs/m365-name-pronunciation-details.pdf",
-      architectureDocLabel: "Architecture Specification (PDF)",
       highlights: [
         "Averages 30M fetch requests/day and 550M requests/month in Microsoft Teams general ring",
         "Successfully coordinated complex PAPI-to-IAPI backend migration with zero downtime",
@@ -119,18 +117,16 @@ export const portfolioData = {
     {
       id: "lpc-platform",
       title: "Live Persona Card (LPC) Platform & Runtime",
-      subtitle: "Shared Microsoft 365 profile runtime powering Teams, Outlook, and Copilot experiences",
+      subtitle: "Individual Contributor (IC) on the shared M365 profile runtime powering Teams, Outlook, and Copilot",
       category: "cloud",
       categoryLabel: "Core Platform & Runtime",
-      badge: "Core Microsoft Platform",
+      badge: "Microsoft IC",
       proprietary: true,
-      description: "Core engineer developing and maintaining Microsoft's Live Persona Card (LPC) platform—a modular, high-scale micro-frontend runtime embedding people identity across Teams, Outlook, and Copilot. Implemented pluggable capability loaders, host adapter contracts, and progressive ring rollouts serving hundreds of millions of enterprise users.",
+      description: "Individual Contributor (IC) developing, feature-adding, and maintaining Microsoft's Live Persona Card (LPC) platform as part of day-to-day responsibilities. Engineered modular capability loaders, host adapter contracts, and progressive ring rollouts for a shared micro-frontend runtime embedding people identity across Teams, Outlook, and Copilot.",
       architecture: "Host Shells (Teams / Outlook) -> Host Adapter Layer -> Core Card Composition Engine -> Capability Registry & Loaders -> Loki Service Abstraction -> Substrate / Graph APIs",
       architectureDiagram: "./docs/live-persona-card-architecture.svg",
-      architectureDocUrl: "./docs/live-persona-card-explanation.docx",
-      architectureDocLabel: "Download LPC Platform Spec (DOCX)",
       highlights: [
-        "Core engineering on the foundational people-profile runtime shared across Microsoft Teams, Outlook, and Copilot",
+        "Individual Contributor (IC) engineering the foundational people-profile runtime shared across Microsoft Teams, Outlook, and Copilot",
         "Two-part rendering contract: centralized capability business logic with host-specific presentation adapters",
         "Modular capability registry allowing new features to mount dynamically with zero host container code churn",
         "Managed progressive ring rollouts (Rings 0-4), tenant admin policy toggles, and GCC/GCC-High sovereign cloud readiness",
@@ -189,8 +185,6 @@ export const portfolioData = {
       description: "Architected a closed-loop monitor-noise remediation system: ingested IcM incidents and telemetry traces, applied recency-weighted ranking and strict safety gates, ran counterfactual historical replays, and orchestrated specialized AI skills to author owner-reviewable PRs that improved signal-to-noise ratio.",
       architecture: "IcM Incident Stream + Geneva Telemetry -> Deterministic Ranking & Safety Gates -> Counterfactual Replay Simulation -> Agentic PR Generator -> Post-Merge Closed-Loop Measurement",
       architectureDiagram: "./docs/noise-triage-bench-architecture.svg",
-      architectureDocUrl: "./docs/noise-triage-bench-deep-dive.docx",
-      architectureDocLabel: "Deep-Dive Architecture Spec (DOCX)",
       highlights: [
         "Substantially reduced on-call alert pages while mathematically verifying zero customer-impacting incidents were suppressed",
         "Deterministic recency-weighted ranking prioritizing active noisy churn over historical drift",
@@ -326,11 +320,12 @@ export const portfolioData = {
   experience: [
     {
       period: "Aug 2021 – Present",
-      role: "Senior Software Engineer (Engineering Lead)",
+      role: "Senior Software Engineer (Tech Lead & IC)",
       company: "Microsoft",
       location: "Remote",
-      description: "Engineering Lead for Name Pronunciation in Microsoft 365 Live People Cards, coordinating rollout and integration across Teams, Outlook, and additional client surfaces.",
+      description: "Engineering Lead for Name Pronunciation and core Individual Contributor (IC) on the Live Persona Card (LPC) platform, coordinating feature rollouts, client integrations, and ongoing reliability maintenance across Teams, Outlook, and M365 client surfaces.",
       achievements: [
+        "Core Individual Contributor (IC) delivering day-to-day feature additions, component fixes, and runtime maintenance for the Live Persona Card (LPC) platform.",
         "Supported production services averaging 30M fetch requests/day and 550M requests/month in Microsoft Teams alone.",
         "Drove end-to-end engineering across flighting, telemetry, reliability, backend migration, administrative controls, and government-cloud enablement.",
         "Coordinated PAPI-to-IAPI migration, diagnosed complex client configurations, and led customer recovery during LiveSite incidents.",

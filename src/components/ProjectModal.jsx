@@ -5,7 +5,6 @@ import {
   CheckCircle2, 
   Cpu, 
   Lock, 
-  FileText, 
   Layers, 
   AlertTriangle, 
   Maximize2 
@@ -174,25 +173,12 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Actions Bar */}
         <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', alignItems: 'center', borderTop: '1px solid var(--border-color)', paddingTop: '1.25rem' }}>
-          {project.architectureDocUrl && (
-            <a
-              href={project.architectureDocUrl}
-              download
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-              style={{ background: 'linear-gradient(135deg, #0284c7 0%, #6366f1 100%)' }}
-            >
-              <FileText size={16} /> {project.architectureDocLabel || 'Download Architectural Spec'}
-            </a>
-          )}
-
           {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline"
+              className="btn btn-primary"
             >
               {project.liveUrl.includes('youtube') || project.liveUrl.includes('youtu.be') 
                 ? 'Watch Feature Demo' 

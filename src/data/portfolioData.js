@@ -6,7 +6,7 @@ export const portfolioData = {
     status: "Lead for High-Scale Enterprise Platforms",
     location: "Nairobi, Kenya (Remote)",
     email: "i.mihuro@gmail.com",
-    github: "https://github.com",
+    github: "https://github.com/IanMihuro",
     linkedin: "https://linkedin.com/in/ian-mihuro-873344104/",
     bio: "Senior Software Engineer and Technical Lead with 10+ years of experience delivering mission-critical enterprise software, scalable production services, and modern full-stack web applications. Served as Engineering Lead for Microsoft 365 Name Pronunciation, coordinating cross-functional feature delivery for a service handling 30 million daily fetch requests on Microsoft Teams.",
   },
@@ -434,7 +434,7 @@ export const portfolioData = {
     projects: "FEATURED WORK:\n  1. M365 Name Pronunciation Platform (Eng Lead, 30M reqs/day, PAPI/IAPI, GraphQL)\n  2. Live Persona Card (LPC) Platform (Shared M365 Runtime across Teams & Outlook)\n  3. Noise Triage Bench: AI Telemetry & RCA Tuning (KQL, Signal-to-RCA, Noise Reduction)\n  4. NIMS Mobile Money Platform (CTO & Co-Founder, 1st Place Startup Istanbul 2015)\n  5. Enterprise Web Platforms via Andela (Firmatek, Agilis Chemicals, Quartet Health)",
     exp: "CAREER HISTORY:\n  [2021 - Pres] Senior Software Engineer (Eng Lead & IC) @ Microsoft\n  [2019 - 2021] Software Engineer @ Andela\n  [2018 - 2019] Full Stack Developer @ mSurvey (Ajua)\n  [2017 - 2018] Software Consultant @ eShare\n  [2015 - 2017] CTO & Co-Founder @ NIMS (1st Place Startup Istanbul 2015)\n  [2014 - 2017] Senior Software Engineer @ Intellisoftplus",
     hobbies: "PERSONAL PASSIONS & INTERESTS:\n  🌿 Botanical Care: Indoor flora propagation, micro-climates, systematic plant cultivation\n  🏋️ Fitness: Functional barbell strength training & long-distance wilderness hikes\n  🎮 Gaming: Immersive open-world RPGs, tactical strategy, game systems mechanics\n  🧭 Road Trips: Long-haul cross-country expeditions, off-the-beaten-path navigation",
-    contact: "CONNECT WITH IAN:\n  Email:    i.mihuro@gmail.com\n  LinkedIn: linkedin.com/in/ian-mihuro-873344104/\n  Location: Nairobi, Kenya (Remote)",
+    contact: "CONNECT WITH IAN:\n  Email:    i.mihuro@gmail.com\n  LinkedIn: linkedin.com/in/ian-mihuro-873344104/\n  GitHub:   github.com/IanMihuro\n  Location: Nairobi, Kenya (Remote)",
     stack: "PORTFOLIO ARCHITECTURE:\n  • Framework: React 18 SPA (Vite 6)\n  • Styling: Modern CSS Custom Properties & Glassmorphism\n  • Icons: Lucide React & Custom SVG\n  • Deployment: GitHub Pages compatible (Static HTML/JS/CSS bundle)",
   },
 };

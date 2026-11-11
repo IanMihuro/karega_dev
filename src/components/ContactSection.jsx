@@ -1,40 +1,15 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, CheckCircle2, Copy, Check, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Copy, Check, MessageSquare, ExternalLink, Clock, ShieldCheck } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1000);
-  };
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(portfolioData.personal.email);
     setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
+    setTimeout(() => setCopiedEmail(false), 2500);
   };
 
   return (
@@ -47,163 +22,92 @@ export default function ContactSection() {
           </div>
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Have a project in mind, looking to hire an engineering leader, or just want to talk system design?
+            Interested in high-scale systems architecture, technical leadership, or advisory? Reach out directly.
           </p>
         </div>
 
-        <div className="contact-grid">
-          {/* Info Card */}
-          <div className="contact-info-card">
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>
-              Let's build something remarkable together.
-            </h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: 1.7 }}>
-              I'm always open to discussing modern full stack architectures, scaling distributed backends, or potential leadership opportunities.
-            </p>
-
-            <div className="contact-method">
-              <div className="contact-icon">
-                <Mail size={22} />
-              </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Email Directly</div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem' }}>
-                  <span className="mono" style={{ fontSize: '0.95rem', fontWeight: 600 }}>{portfolioData.personal.email}</span>
-                  <button
-                    onClick={handleCopyEmail}
-                    style={{
-                      background: 'transparent',
-                      border: 'none',
-                      color: copiedEmail ? 'var(--accent-emerald)' : 'var(--text-muted)',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                    }}
-                    title="Copy Email"
-                  >
-                    {copiedEmail ? <Check size={16} /> : <Copy size={16} />}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-method">
-              <div className="contact-icon">
-                <MapPin size={22} />
-              </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Location</div>
-                <div style={{ fontSize: '0.95rem', fontWeight: 600, marginTop: '0.2rem' }}>
-                  {portfolioData.personal.location}
-                </div>
-              </div>
-            </div>
-
-            <div style={{ marginTop: '2.5rem', display: 'flex', gap: '1rem' }}>
-              <a
-                href={portfolioData.personal.github}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline"
-                style={{ flex: 1 }}
-              >
-                <GithubIcon size={18} /> GitHub
-              </a>
-              <a
-                href={portfolioData.personal.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline"
-                style={{ flex: 1 }}
-              >
-                <LinkedinIcon size={18} /> LinkedIn
-              </a>
-            </div>
+        <div className="contact-hub-card">
+          <div className="status-badge" style={{ marginBottom: '1.25rem' }}>
+            <span className="status-dot"></span>
+            <span>Open to Senior Engineering &amp; Technical Leadership Roles</span>
           </div>
 
-          {/* Form */}
-          <div className="contact-form">
-            {submitted && (
-              <div className="form-feedback success">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}>
-                  <CheckCircle2 size={18} />
-                  <span>Message sent successfully!</span>
-                </div>
-                <p style={{ marginTop: '0.25rem', fontSize: '0.85rem' }}>
-                  Thank you for reaching out. I typically respond within 24 hours.
-                </p>
-              </div>
-            )}
+          <h3 style={{ fontSize: '1.85rem', fontWeight: 800, marginBottom: '0.85rem' }}>
+            Let's build scalable systems together.
+          </h3>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '640px', margin: '0 auto 2rem auto', fontSize: '1.05rem', lineHeight: 1.7 }}>
+            Whether you are looking to scale distributed cloud architectures, discuss LiveSite telemetry best practices, or explore leadership opportunities, my inbox is always open.
+          </p>
 
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label className="form-label" htmlFor="name">Your Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Jane Doe"
-                />
-              </div>
+          {/* Quick Action Channels */}
+          <div className="contact-hub-channels">
+            <a
+              href={`mailto:${portfolioData.personal.email}`}
+              className="btn btn-primary"
+              style={{ padding: '0.85rem 1.75rem', fontSize: '1rem' }}
+            >
+              <Mail size={18} /> Compose Email
+            </a>
 
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">Your Email Address</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="jane@company.com"
-                />
-              </div>
+            <button
+              onClick={handleCopyEmail}
+              className="btn btn-outline"
+              style={{ padding: '0.85rem 1.5rem', fontSize: '0.95rem' }}
+              title="Copy Email to Clipboard"
+            >
+              {copiedEmail ? <Check size={18} style={{ color: 'var(--accent-emerald)' }} /> : <Copy size={18} />}
+              <span>{copiedEmail ? 'Email Copied!' : 'Copy Email Address'}</span>
+            </button>
 
-              <div className="form-group">
-                <label className="form-label" htmlFor="subject">Subject</label>
-                <input
-                  id="subject"
-                  type="text"
-                  name="subject"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="New opportunity / Architecture consulting"
-                />
-              </div>
+            <a
+              href={portfolioData.personal.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-outline"
+              style={{ padding: '0.85rem 1.5rem', fontSize: '0.95rem' }}
+            >
+              <LinkedinIcon size={18} /> LinkedIn Profile <ExternalLink size={14} />
+            </a>
 
-              <div className="form-group">
-                <label className="form-label" htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Tell me about your project, timeline, and stack requirements..."
-                ></textarea>
-              </div>
+            <a
+              href={portfolioData.personal.github}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-outline"
+              style={{ padding: '0.85rem 1.5rem', fontSize: '0.95rem' }}
+            >
+              <GithubIcon size={18} /> GitHub Profile <ExternalLink size={14} />
+            </a>
+          </div>
 
-              <button
-                type="submit"
-                className="btn btn-primary"
-                style={{ width: '100%' }}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending Message...' : (
-                  <>
-                    <Send size={16} /> Send Message
-                  </>
-                )}
-              </button>
-            </form>
+          {/* Verified Metadata Row */}
+          <div className="contact-details-row">
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-cyan)', marginBottom: '0.35rem', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase' }}>
+                <Mail size={16} /> Verified Email
+              </div>
+              <div className="mono" style={{ fontSize: '0.95rem', fontWeight: 600 }}>
+                {portfolioData.personal.email}
+              </div>
+            </div>
+
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-cyan)', marginBottom: '0.35rem', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase' }}>
+                <MapPin size={16} /> Location
+              </div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 500, color: 'var(--text-secondary)' }}>
+                {portfolioData.personal.location}
+              </div>
+            </div>
+
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-cyan)', marginBottom: '0.35rem', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase' }}>
+                <Clock size={16} /> Response Time
+              </div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 500, color: 'var(--text-secondary)' }}>
+                Typically within 24 hours
+              </div>
+            </div>
           </div>
         </div>
       </div>

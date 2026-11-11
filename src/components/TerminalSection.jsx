@@ -7,11 +7,18 @@ export default function TerminalSection() {
   const [history, setHistory] = useState([
     { type: 'output', text: 'Welcome to Ian Karega Mihuro\'s Interactive Console [v2.4.0]\nType "help" or click the command badges below to inspect technical scale, architecture, and experience.' }
   ]);
-  const bottomRef = useRef(null);
+  const terminalBodyRef = useRef(null);
   const inputRef = useRef(null);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (cmdText) => {
@@ -103,7 +110,7 @@ export default function TerminalSection() {
             <div style={{ width: '40px' }}></div>
           </div>
 
-          <div className="terminal-body">
+          <div className="terminal-body" ref={terminalBodyRef}>
             {history.map((item, idx) => (
               <div key={idx} className={`terminal-line ${item.type}`}>
                 {item.text}
@@ -124,7 +131,6 @@ export default function TerminalSection() {
               />
               <button type="submit" style={{ display: 'none' }}>Submit</button>
             </form>
-            <div ref={bottomRef} />
           </div>
         </div>
       </div>

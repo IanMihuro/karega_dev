@@ -68,11 +68,11 @@ This repository includes a preconfigured workflow at `.github/workflows/deploy.y
    ```
 
 2. **Create a GitHub Repository**:
-   - Go to [GitHub](https://github.com/new) and create a new repository (e.g. `portfolio` or `<your-username>.github.io`).
+   - Go to [GitHub](https://github.com/new) and create a new repository (e.g. `portfolio` or `IanMihuro.github.io`).
    - Add your remote and push:
      ```bash
      git branch -M main
-     git remote add origin https://github.com/<your-username>/<repo-name>.git
+     git remote add origin https://github.com/IanMihuro/<repo-name>.git
      git push -u origin main
      ```
 
